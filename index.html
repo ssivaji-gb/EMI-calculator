@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* main container */
+    .emi-form {
+      background: #ffffff;
+      padding: 25px 30px;
+      width: 360px;
+      border-radius: 14px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    /* form */
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form input {
+      padding: 11px 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .form input:focus {
+      border-color: #4facfe;
+      box-shadow: 0 0 6px rgba(79, 172, 254, 0.6);
+    }
+
+    /* submit button */
+    .form button {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(135deg, #4facfe, #00c6ff);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .form button:active {
+      transform: scale(0.98);
+    }
+
+    /* output section */
+    .viewout {
+      margin-top: 22px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f3f6fb;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .viewout label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .viewout div {
+      padding: 10px;
+      background: #ffffff;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      text-align: right;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+  <body>
+    <div class="emi-form">
+      <!-- input-data -->
+      <form class="form">
+        <label for="princepal-amount">Loan Amount</label>
+        <input
+          type="number"
+          name="princepal-amount"
+          placeholder="Enter the Loan Amount"
+          class="princepal"
+          required
+        />
+        <label for="Interest">Interest rate</label>
+        <input
+          type="number"
+          name="Interest"
+          placeholder="Enter the Interest-rate"
+          class="interest"
+          required
+        />
+        <label for="Duration">Loan Duration</label>
+        <input
+          type="number"
+          name="Duration"
+          placeholder="Enter the Loan Duration"
+          class="duration"
+          required
+        />
+        <button type="submit">submit</button>
+      </form>
+
+      <!-- calculate output  -->
+
+      <div class="viewout">
+        <label for="PrincipalAmountview">princepal</label>
+        <div class="PrincipalAmountview"></div>
+        <label for="interestamountview">Interest</label>
+        <div class="interestamountview"></div>
+        <label for="TotalPayableview">Total payabele</label>
+        <div class="TotalPayableview"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
