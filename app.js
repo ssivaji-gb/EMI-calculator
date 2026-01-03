@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
 
   let si = (princepal / 100) * interest * duration;
 
-  document.querySelector(".PrincipalAmountview").innerHTML = princepal;
-  document.querySelector(".interestamountview").innerHTML = si;
-  document.querySelector(".TotalPayableview").innerHTML = princepal + si;
+  document.querySelector(".PrincipalAmountview").innerHTML = `${princepal}₹`
+  document.querySelector(".interestamountview").innerHTML = `${si}₹`
+  document.querySelector(".TotalPayableview").innerHTML = `${princepal + si}₹`;
 });
