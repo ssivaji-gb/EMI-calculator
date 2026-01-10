@@ -19,9 +19,10 @@ form.addEventListener("submit", (e) => {
 
   // simple-Intrest
   let si = (princepal / 100) * interest * duration;
-  let yearlyamount=princepal+si/duration
-  let monthly=Math.round(yearlyamount/12)
-
+  let mon=duration*12
+  let yearlyamount=(princepal+si)/mon
+  let monthly=yearlyamount
+  
   document.querySelector(".PrincipalAmountviewsi").innerHTML = `${princepal}₹`
   document.querySelector(".interestamountviewsi").innerHTML = `${si}₹`
     document.querySelector(".monthamountviewsi").innerHTML=`${monthly}₹`
