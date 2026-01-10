@@ -28,7 +28,7 @@ h1 {
   color: #333;
 }
 
-.emi-form {
+.emi-formsi {
   background: #fff;
   padding: 25px 30px;
   width: 350px;
@@ -36,18 +36,18 @@ h1 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.form {
+.formsi {
   display: flex;
   flex-direction: column;
 }
 
-.form label {
+.formsi label {
   margin: 10px 0 5px;
   font-size: 14px;
   color: #555;
 }
 
-.form input {
+.formsi input {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -55,11 +55,11 @@ h1 {
   font-size: 14px;
 }
 
-.form input:focus {
+.formsi input:focus {
   border-color: #667eea;
 }
 
-.form button {
+.formsi button {
   margin-top: 15px;
   padding: 10px;
   background: #667eea;
@@ -71,42 +71,158 @@ h1 {
   transition: background 0.3s;
 }
 
-.form button:hover {
+.formsi button:hover {
   background: #5a67d8;
 }
 
 /* output section */
 
-.viewout {
+.viewoutsi {
   margin-top: 20px;
   padding-top: 15px;
   border-top: 1px solid #ddd;
 }
 
-.viewout label {
+.viewoutsi label {
   font-size: 13px;
   color: #666;
 }
 
-.viewout div {
+.viewoutsi div {
   margin-bottom: 10px;
   font-weight: bold;
   color: #333;
 }
 
+
+/* compond-intrest */
+
+/* Page container */
+.compondintrestpage {
+  display: none;
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f9fafc;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.compondintrestpage h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* Form */
+.formci {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Labels */
+.formci label {
+  font-weight: 600;
+  color: #34495e;
+  font-size: 14px;
+}
+
+/* Inputs */
+.formci input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.formci input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+}
+
+/* Submit button */
+.formci button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #3498db;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formci button:hover {
+  background: #2980b9;
+}
+
+/* Output section */
+.viewoutci {
+  margin-top: 25px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Output labels */
+.viewoutci label {
+  font-weight: 600;
+  color: #555;
+}
+
+/* Output values */
+.viewoutci div {
+  background: #f1f3f6;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: right;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Simple interest button */
+.simple-intrest,.compound-interest {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.simple-intrest:hover {
+  background: #27ae60;
+}
+
+
   </style>
   <body>
-    <h1>EMI Calculator</h1>
-    <div class="emi-form">
+    <h1>EMI Calculator</h1> 
+        <!-- simple-intrest -->
+
+    <div class="emi-formsi">
       <!-- input-data -->
-       
-      <form class="form">
-        <label for="princepal-amount">Loan Amount</label>
+       <h1>simple Intrest</h1>
+      <form class="formsi">
+        <label for="princepal-amountsi">Loan Amount</label>
         <input
           type="number"
           name="princepal-amount"
           placeholder="Enter the Loan Amount"
-          class="princepal"
+          class="princepalsi"
           required
         />
         <label for="Interest">Interest rate (%)</label>
@@ -114,7 +230,7 @@ h1 {
           type="number"
           name="Interest"
           placeholder="Enter the Interest-rate"
-          class="interest"
+          class="interestsi"
           required
         />
         <label for="Duration">Loan Tenure (Years)</label>
@@ -122,7 +238,7 @@ h1 {
           type="number"
           name="Duration"
           placeholder="Enter the Loan Duration"
-          class="duration"
+          class="durationsi"
           required
         />
         <button type="submit">submit</button>
@@ -130,15 +246,63 @@ h1 {
 
       <!-- calculate output  -->
 
-      <div class="viewout">
+      <div class="viewoutsi">
         <label for="PrincipalAmountview">princepal</label>
-        <div class="PrincipalAmountview"></div>
+        <div class="PrincipalAmountviewsi"></div>
         <label for="interestamountview">Interest (%)</label>
-        <div class="interestamountview"></div>
+        <div class="interestamountviewsi"></div>
         <label for="TotalPayableview">Total payabele</label>
-        <div class="TotalPayableview"></div>
+        <div class="TotalPayableviewsi"></div>
       </div>
+      <button class="compound-interest">Compound Interest</button>
     </div>
+
+    <!-- compond-intrest -->
+    <div class="compondintrestpage">
+       <h1>Compound Interest</h1>
+      <form class="formci">
+        <label for="princepal-amountci">Loan Amount</label>
+        <input
+          type="number"
+          name="princepal-amount"
+          placeholder="Enter the Loan Amount"
+          class="princepalci"
+          required
+        />
+        <label for="Interest">Interest rate (%)</label>
+        <input
+          type="number"
+          name="Interest"
+          placeholder="Enter the Interest-rate"
+          class="interestci"
+          required
+        />
+        <label for="Duration">Loan Tenure (Years)</label>
+        <input
+          type="number"
+          name="Duration"
+          placeholder="Enter the Loan Duration"
+          class="durationci"
+          required
+        />
+        <button type="submit">submit</button>
+      </form>
+
+      <!-- calculate output  -->
+
+      <div class="viewoutci">
+        <label for="PrincipalAmountview">princepal</label>
+        <div class="PrincipalAmountviewci"></div>
+        <label for="interestamountview">Interest (%)</label>
+        <div class="interestamountviewci"></div>
+        <label for="TotalPayableview">Total payabele</label>
+        <div class="TotalPayableviewci"></div>
+      </div>
+      <button class="simple-intrest">Simple Intrest</button>
+    </div>
+
+    </div>
+    
 
     <script src="app.js"></script>
   </body>
