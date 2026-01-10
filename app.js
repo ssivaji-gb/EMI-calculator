@@ -3,6 +3,8 @@
 let simpleSi=document.querySelector(".emi-formsi")
 let compoundCi=document.querySelector(".compondintrestpage")
 
+let formci=document.querySelector(".formci")
+
 
 let compound_btn=document.querySelector(".compound-interest")
 let simple_btn=document.querySelector(".simple-intrest")
@@ -39,6 +41,24 @@ simple_btn.addEventListener("click",()=>{
 compound_btn.addEventListener("click",()=>{
   simpleSi.style.display="none"
   compoundCi.style.display="block"
+})
+
+
+formci.addEventListener("click",(e)=>{
+  e.preventDefault()
+  let princepal = Number(document.querySelector(".princepalci").value);
+  let interest = Number(document.querySelector(".interestci").value);
+  let duration = Number(document.querySelector(".durationci").value);
+
+  let A = princepal * Math.pow((1 + interest / 100), duration)
+  let ci= Math.round(A-princepal)
+  console.log(ci);
+  
+
+  document.querySelector(".PrincipalAmountviewci").innerHTML = `${princepal}₹`
+  document.querySelector(".interestamountviewci").innerHTML = `${ci}₹`
+  document.querySelector(".TotalPayableviewci").innerHTML = `${princepal + ci}₹`;
+
 })
 
 
